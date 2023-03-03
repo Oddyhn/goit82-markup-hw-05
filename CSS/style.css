@@ -130,10 +130,15 @@ body {
 	letter-spacing: 0.03em;
 
 	color: var(--bglatter-color);
+	transition: color 250ms var(--timing-fc);
 }
 
 .logo-style > span {
 	color: var(--decor-color);
+}
+
+.logo-style > span:hover {
+	color: inherit;
 }
 
 /* Header */
@@ -143,6 +148,8 @@ body {
 }
 
 .menu-item {
+	position: relative;
+
 	margin-right: 40px;
 }
 
@@ -151,24 +158,39 @@ body {
 }
 
 .menu-link {
-	position: relative;
-
 	font-weight: 500;
 	line-height: 1.5;
 
 	color: var(--bglatter-color);
+	transition: color 250ms var(--timing-fc);
 }
 
 .current {
 	color: var(--active-color);
 }
 
-.menu-link.current::after {
+.menu-item .current::after {
 	content: "";
 
 	position: absolute;
 	left: 0;
-	bottom: -27px;
+	bottom: -25px;
+
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-color: var(--active-color);
+	border-radius: 2px;
+
+	opacity: 1;
+}
+
+.menu-link::after {
+	content: "";
+
+	position: absolute;
+	left: 0;
+	bottom: -25px;
 
 	display: block;
 	width: 100%;
@@ -180,7 +202,7 @@ body {
 	transition: opacity 250ms var(--timing-fc);
 }
 
-.menu-link.current:hover::after {
+.menu-link:hover::after {
 	opacity: 1;
 }
 
@@ -203,6 +225,7 @@ body {
 	line-height: 1.5;
 
 	color: var(--smlatter-color);
+	transition: color 250ms var(--timing-fc);
 }
 
 .logo-style:hover,
@@ -261,6 +284,7 @@ body {
 
 .social > .media-list > li > a {
 	background-color: rgba(255, 255, 255, 0.1);
+	transition: background-color 250ms var(--timing-fc);
 }
 
 .social > .media-list > li > a > .media-icon {
@@ -327,6 +351,8 @@ body {
 	background-color: var(--decor-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
+
+	transition: background-color 250ms var(--timing-fc);
 }
 
 .order-btn:hover,
@@ -469,6 +495,8 @@ body {
 	height: 40px;
 	border-radius: 50%;
 	background-color: var(--decor-color);
+
+	transition: background-color 250ms var(--timing-fc);
 }
 
 .media-icon {
@@ -501,6 +529,8 @@ body {
 	color: var(--ico-color);
 	border: 1px solid currentColor;
 	border-radius: 3px;
+
+	transition: color 250ms var(--timing-fc);
 }
 
 .customer-icon {
@@ -553,6 +583,8 @@ body {
 	background: var(--lightfon-color);
 	border: 1px solid var(--ltdecor-color);
 	border-radius: 4px;
+
+	transition: background-color 250ms var(--timing-fc), color 250ms var(--timing-fc), box-shadow 250ms var(--timing-fc);
 }
 
 .filter-btn:hover,
@@ -561,7 +593,6 @@ body {
 
 	background: var(--active-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-	border-radius: 4px;
 }
 
 .filter-btn:visited {
@@ -593,6 +624,8 @@ body {
 
 .project-link {
 	display: inline-block;
+
+	transition: box-shadow 250ms var(--timing-fc);
 }
 
 .project-content {
@@ -681,6 +714,8 @@ body {
 	background-color: #fcfcfc;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
+
+	transition: background-color 250ms var(--timing-fc), box-shadow 250ms var(--timing-fc);
 }
 
 .modal-close {
@@ -694,6 +729,8 @@ body {
 	color: #000;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	background-color: var(--ltdecor-color);
+
+	transition: background-color 250ms var(--timing-fc), color 250ms var(--timing-fc);
 }
 
 .modal-icon {
